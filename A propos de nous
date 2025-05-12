@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A PROPOS DE NOUS- the master of breeze</title>
+  <title>A PROPOS DE NOUS - The Master of Breeze</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>The master of breeze,<br>un jeu qui parle de nous.</h1>
-  <h2>Parler aux jeunes, parce qu'on est pas vieux<h2>
-
-
+  <h1>The Master of Breeze,<br>un jeu qui parle de nous.</h1>
+  <h2>Parler aux jeunes, parce qu'on est pas vieux</h2>
 </body>
 </html>
+
