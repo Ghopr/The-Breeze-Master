@@ -9,7 +9,7 @@ body {
   background-color: #ffffff;
   color: #000000;
 }
-lien {
+bandeau {
 text-align:center;
 background-color : black;
 }
