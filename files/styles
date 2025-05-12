@@ -9,6 +9,7 @@ body {
   background-color: #ffffff;
   color: #000000;
 }
+
 bandeau {
 text-align:center;
 background-color : black;
