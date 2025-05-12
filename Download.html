@@ -1,18 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download Page</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Download Page - The Master of Breeze</title>
+  <link rel="stylesheet" href="files/styles.css"> <!-- Make sure your CSS file is linked correctly -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #002366; 
+      color: white; 
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 50px;
+    }
+    .button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .green-btn {
+      background-color: #4CAF50; 
+      color: white;
+    }
+
+    .yellow-btn {
+      background-color: #FFEB3B; 
+      color: black;
+    }
+
+    .text-content {
+      margin-top: 50px;
+      font-size: 20px;
+      max-width: 800px;
+      text-align: left;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
-
-  <h1>Download Page</h1>
-  <p>Bonjour</p>
-
-
-  <a href="files/sample.zip" LE FILE</a>
-
-</body>
-</html>
+  <div>
+    <a href="index.html" class="button green-btn">Accueil (Index)</a>
+    <a href="A_propos_de_nous.html" class="button yellow-btn">À propos de nous</a>
+  </div>
+  <div class="text-content">
