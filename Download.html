@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Download Page - The Master of Breeze</title>
-  <link rel="stylesheet" href="files/styles.css"> <!-- Make sure your CSS file is linked correctly -->
+  <link rel="stylesheet" href="files/styles.css">
   <style>
     * {
       margin: 0;
@@ -23,16 +23,24 @@
       justify-content: flex-start;
       align-items: center;
       padding-top: 50px;
+      position: relative;
+      overflow: hidden;
     }
+
     .button {
       padding: 15px 30px;
       font-size: 18px;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
       margin: 10px;
       text-decoration: none;
       display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
     }
 
     .green-btn {
@@ -52,11 +60,50 @@
       text-align: left;
       padding: 20px;
     }
+
+    
+    .download-btn {
+      background-color: white;
+      color: #4B0082; 
+      font-size: 24px;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 40px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    
+    .corner-image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 250px;
+      height: auto;
+      border-radius: 20px 0 0 0; 
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
+
+ 
   <div>
     <a href="index.html" class="button green-btn">Accueil</a>
     <a href="A_propos_de_nous.html" class="button yellow-btn">À propos de nous</a>
   </div>
+
+  
   <div class="text-content">
+    <p>Bienvenue sur la page de téléchargement. Cliquez ci-dessous pour obtenir votre copie du jeu "The Master of Breeze".</p>
+  </div>
+
+
+  <a href="files/jeux.zip" class="download-btn" download>Télécharger</a>
+
+
+  <img src="files/images/chateau.png" alt="Château" class="corner-image">
+
+</body>
+</html>
