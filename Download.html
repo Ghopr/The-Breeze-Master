@@ -17,14 +17,47 @@
       background-color: #000000; 
       color: white; 
       text-align: center;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      padding-top: 50px;
+      min-height: 100vh;
       position: relative;
       overflow: hidden;
+    }
+
+    /* Navigation bar */
+    .navbar {
+      width: 100%;
+      background-color: #4B0082; 
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .nav-button {
+      background-color: #4B0082; 
+      color: white;
+      padding: 12px 20px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .nav-button:hover {
+      background-color: #3a006d;
+    }
+
+    
+    .page-content {
+      padding-top: 100px; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .button {
@@ -54,14 +87,13 @@
     }
 
     .text-content {
-      margin-top: 50px;
+      margin-top: 40px;
       font-size: 20px;
       max-width: 800px;
       text-align: left;
       padding: 20px;
     }
 
-    
     .download-btn {
       background-color: white;
       color: #4B0082; 
@@ -69,17 +101,16 @@
       padding: 20px 40px;
       border: none;
       border-radius: 12px;
-      margin-top: 40px;
+      margin-top: 30px;
       text-decoration: none;
       display: inline-block;
     }
 
-    
     .corner-image {
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 250px;
+      width: 350px; /* Bigger image */
       height: auto;
       border-radius: 20px 0 0 0; 
       object-fit: cover;
@@ -88,22 +119,37 @@
 </head>
 <body>
 
- 
-  <div>
-    <a href="index.html" class="button green-btn">Accueil</a>
-    <a href="A_propos_de_nous.html" class="button yellow-btn">À propos de nous</a>
+
+  <div class="navbar">
+    <a href="index.html" class="nav-button">Accueil</a>
+    <a href="A_propos_de_nous.html" class="nav-button">À propos</a>
+    <a href="Download.html" class="nav-button">Téléchargement</a>
+    <a href="donation.html" class="nav-button">Don</a>
+    <a href="service.html" class="nav-button">Service</a>
   </div>
+
+
+  <div class="page-content">
+
+ 
+    <div>
+      <a href="index.html" class="button green-btn">Accueil</a>
+      <a href="A_propos_de_nous.html" class="button yellow-btn">À propos de nous</a>
+    </div>
 
   
-  <div class="text-content">
-    <p>Bienvenue sur la page de téléchargement. Cliquez ci-dessous pour obtenir votre copie du jeu "The Master of Breeze".</p>
+    <div class="text-content">
+      <p>Bienvenue sur la page de téléchargement. Cliquez ci-dessous pour obtenir votre copie du jeu "The Master of Breeze".</p>
+    </div>
+
+ 
+    <a href="files/jeux.zip" class="download-btn" download>Télécharger</a>
+
   </div>
-
-
-  <a href="files/jeux.zip" class="download-btn" download>Télécharger</a>
 
 
   <img src="files/images/chateau.png" alt="Château" class="corner-image">
 
 </body>
 </html>
+
