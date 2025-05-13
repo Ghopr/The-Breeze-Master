@@ -22,10 +22,9 @@
       overflow: hidden;
     }
 
-    /* Navigation bar */
     .navbar {
       width: 100%;
-      background-color: #4B0082; 
+      background-color: rgba(75, 0, 130, 0.9); /* Dark violet with transparency */
       display: flex;
       justify-content: center;
       padding: 15px 0;
@@ -36,22 +35,22 @@
     }
 
     .nav-button {
-      background-color: #4B0082; 
+      background-color: transparent;
       color: white;
       padding: 12px 20px;
       margin: 0 10px;
-      border: none;
+      border: 2px solid white;
       border-radius: 5px;
       font-size: 16px;
       text-decoration: none;
       cursor: pointer;
-      transition: background-color 0.2s;
+      transition: background-color 0.2s, color 0.2s;
     }
 
     .nav-button:hover {
-      background-color: #3a006d;
+      background-color: white;
+      color: #4B0082;
     }
-
     
     .page-content {
       padding-top: 100px; 
