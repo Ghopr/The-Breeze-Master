@@ -23,25 +23,33 @@
       justify-content: flex-start;
       align-items: center;
       padding-top: 50px;
+      position: relative;
+      overflow: hidden;
     }
+
     .button {
       padding: 15px 30px;
       font-size: 18px;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
       margin: 10px;
       text-decoration: none;
       display: inline-block;
+      transition: transform 0.2s;
     }
 
-    .purple-btn {
-      background-color: #5b2fa3; 
+    .button:hover {
+      transform: scale(1.05);
+    }
+
+    .green-btn {
+      background-color: #2BE0ED; 
       color: white;
     }
 
     .yellow-btn {
-      background-color: #FFEB3B; 
+      background-color: #F72020; 
       color: black;
     }
 
@@ -52,9 +60,29 @@
       text-align: left;
       padding: 20px;
     }
-    bandeau {
-    text-align: center;
-    background-color: #000000;
+
+    
+    .download-btn {
+      background-color: white;
+      color: #4B0082; 
+      font-size: 24px;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 40px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    
+    .corner-image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 250px;
+      height: auto;
+      border-radius: 20px 0 0 0; 
+      object-fit: cover;
     }
   </style>
 </head>
