@@ -1,148 +1,107 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download Page - The Master of Breeze</title>
-  <link rel="stylesheet" href="files/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Téléchargement - The Master of Breeze</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: Arial, sans-serif;
-      background-color: #000000; 
-      color: white; 
+      background-color: #000;
+      color: white;
+      padding-top: 100px;
       text-align: center;
-      min-height: 100vh;
       position: relative;
-      overflow: hidden;
     }
-
     .navbar {
       width: 100%;
-      background-color: rgba(75, 0, 130, 0.9); /* Dark violet with transparency */
+      background-color: rgba(75, 0, 130, 0.95);
       display: flex;
-      justify-content: center;
-      padding: 15px 0;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
       position: fixed;
       top: 0;
-      left: 0;
       z-index: 1000;
     }
-
+    .navbar-left .logo {
+      height: 50px;
+      border-radius: 8px;
+    }
+    .navbar-center {
+      display: flex;
+      gap: 15px;
+      flex-grow: 1;
+      justify-content: center;
+    }
     .nav-button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: 2px solid white;
       background-color: transparent;
       color: white;
-      padding: 12px 20px;
-      margin: 0 10px;
-      border: 2px solid white;
-      border-radius: 5px;
-      font-size: 16px;
       text-decoration: none;
-      cursor: pointer;
-      transition: background-color 0.2s, color 0.2s;
+      border-radius: 8px;
+      transition: all 0.3s;
     }
-
     .nav-button:hover {
       background-color: white;
       color: #4B0082;
     }
-    
-    .page-content {
-      padding-top: 100px; 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .button {
-      padding: 15px 30px;
+    .lang-button {
       font-size: 18px;
+      padding: 10px 15px;
+      background-color: white;
+      color: #4B0082;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      margin: 10px;
-      text-decoration: none;
-      display: inline-block;
-      transition: transform 0.2s;
     }
-
-    .button:hover {
-      transform: scale(1.05);
-    }
-
-    .green-btn {
-      background-color: #2BE0ED; 
-      color: white;
-    }
-
-    .yellow-btn {
-      background-color: #F72020; 
-      color: black;
-    }
-
-    .text-content {
-      margin-top: 40px;
-      font-size: 20px;
-      max-width: 800px;
-      text-align: left;
-      padding: 20px;
-    }
-
     .download-btn {
       background-color: white;
-      color: #4B0082; 
+      color: #4B0082;
       font-size: 24px;
       padding: 20px 40px;
       border: none;
       border-radius: 12px;
-      margin-top: 30px;
+      margin-top: 40px;
       text-decoration: none;
       display: inline-block;
     }
-
     .corner-image {
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 350px; /* Bigger image */
+      width: 250px;
       height: auto;
-      border-radius: 20px 0 0 0; 
+      border-radius: 20px 0 0 0;
       object-fit: cover;
     }
   </style>
 </head>
 <body>
-
-
-  <div class="navbar">
-    <a href="index.html" class="nav-button">Accueil</a>
-    <a href="A_propos_de_nous.html" class="nav-button">À propos</a>
-    <a href="Download.html" class="nav-button">Téléchargement</a>
-    <a href="donation.html" class="nav-button">Don</a>
-    <a href="service.html" class="nav-button">Service</a>
-  </div>
-
-
-  <div class="page-content">
-
-  
-    <div class="text-content">
-      <p>Bienvenue sur la page de téléchargement. Cliquez ci-dessous pour obtenir votre copie du jeu "The Master of Breeze".</p>
+  <header class="navbar">
+    <div class="navbar-left">
+      <img src="files/images/logo.jpg" alt="Logo" class="logo">
     </div>
+    <nav class="navbar-center">
+      <a href="index.html" class="nav-button">Accueil</a>
+      <a href="A_propos_de_nous.html" class="nav-button">À propos</a>
+      <a href="Download.html" class="nav-button">Téléchargement</a>
+      <a href="donation.html" class="nav-button">Don</a>
+      <a href="service.html" class="nav-button">Service</a>
+    </nav>
+    <div class="navbar-right">
+      <button class="lang-button">🌐</button>
+    </div>
+  </header>
 
- 
-    <a href="files/jeux.zip" class="download-btn" download>Télécharger</a>
-
+  <div>
+    <a href="files/jeux.zip" class="download-btn">Télécharger</a>
+    <img src="files/images/chateau.jpg" alt="Château" class="corner-image">
   </div>
-
-
-  <img src="files/images/chateau.png" alt="Château" class="corner-image">
-
 </body>
 </html>
+
 
