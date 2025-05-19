@@ -3,84 +3,160 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accueil - The Master of Breeze</title>
+  <title>The Master of Breeze</title>
+  <link rel="stylesheet" href="files/styles.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background-color: #000;
       color: white;
-      padding-top: 100px;
-      text-align: center;
     }
+
     .navbar {
       width: 100%;
-      background-color: rgba(75, 0, 130, 0.95);
+      background-color: rgba(75, 0, 130, 0.9);
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       padding: 10px 20px;
       position: fixed;
       top: 0;
+      left: 0;
       z-index: 1000;
     }
-    .navbar-left .logo {
+
+    .nav-left img {
       height: 50px;
-      border-radius: 8px;
     }
-    .navbar-center {
+
+    .nav-center {
       display: flex;
       gap: 15px;
-      flex-grow: 1;
+      flex: 1;
       justify-content: center;
     }
+
     .nav-button {
-      padding: 15px 25px;
-      font-size: 18px;
-      border: 2px solid white;
       background-color: transparent;
       color: white;
-      text-decoration: none;
+      padding: 14px 24px;
+      border: 2px solid white;
       border-radius: 8px;
-      transition: all 0.3s;
+      font-size: 18px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
     }
+
     .nav-button:hover {
       background-color: white;
       color: #4B0082;
     }
+
+    .lang-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
     .lang-button {
-      font-size: 18px;
-      padding: 10px 15px;
-      background-color: white;
-      color: #4B0082;
-      border: none;
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 16px;
       border-radius: 8px;
       cursor: pointer;
+      font-size: 16px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1001;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: #4B0082;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #eee;
+    }
+
+    .flag {
+      width: 24px;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .page-content {
+      padding-top: 100px;
+      text-align: center;
+    }
+
+    .hero-gif {
+      margin-top: 40px;
+      width: 100%;
+      max-width: 500px;
     }
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="navbar-left">
-      <img src="files/images/logo.png" alt="Logo" class="logo">
+
+  <div class="navbar">
+    <div class="nav-left">
+      <img src="files/images/logo.png" alt="Logo">
     </div>
-    <nav class="navbar-center">
+
+    <div class="nav-center">
       <a href="index.html" class="nav-button">Accueil</a>
       <a href="A_propos_de_nous.html" class="nav-button">À propos</a>
       <a href="Download.html" class="nav-button">Téléchargement</a>
       <a href="donation.html" class="nav-button">Don</a>
       <a href="service.html" class="nav-button">Service</a>
-    </nav>
-    <div class="navbar-right">
-      <button class="lang-button">🌐</button>
     </div>
-  </header>
 
-  <div>
+    <div class="lang-dropdown">
+      <button class="lang-button">🌐</button>
+      <div class="dropdown-content">
+        <a href="index.html"><img src="files/images/fr.png" alt="Français" class="flag"> Français</a>
+        <a href="index_eng.html"><img src="files/images/uk.png" alt="English" class="flag"> English</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
     <h1>The Master of Breeze</h1>
     <p>Voici un aperçu du charisme du héros en 4K</p>
-    <img src="files/gifs/maitre.gif" alt="Le héros">
+    <img src="files/gifs/maitre.gif" alt="Le héros" class="hero-gif">
   </div>
+
+  <script>
+    const langButton = document.querySelector('.lang-button');
+    const dropdown = document.querySelector('.dropdown-content');
+
+    langButton.addEventListener('click', () => {
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    window.addEventListener('click', function(e) {
+      if (!e.target.closest('.lang-dropdown')) {
+        dropdown.style.display = 'none';
+      }
+    });
+  </script>
+
 </body>
 </html>
 
