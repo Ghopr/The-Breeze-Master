@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download - The Master of Breeze</title>
+  <link rel="stylesheet" href="files/styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: white;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: rgba(75, 0, 130, 0.9);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .nav-left img {
+      height: 50px;
+    }
+
+    .nav-center {
+      display: flex;
+      gap: 15px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-button {
+      background-color: transparent;
+      color: white;
+      padding: 14px 24px;
+      border: 2px solid white;
+      border-radius: 8px;
+      font-size: 18px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .nav-button:hover {
+      background-color: white;
+      color: #4B0082;
+    }
+
+    .lang-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .lang-button {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1001;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: #4B0082;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #eee;
+    }
+
+    .flag {
+      width: 24px;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .page-content {
+      padding-top: 120px;
+      text-align: center;
+    }
+
+    .download-btn {
+      background-color: white;
+      color: #4B0082;
+      font-size: 24px;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 40px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .corner-image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 250px;
+      height: auto;
+      border-radius: 20px 0 0 0;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="nav-left">
+      <img src="files/images/logo.png" alt="Logo" />
+    </div>
+
+    <div class="nav-center">
+      <a href="index_eng.html" class="nav-button">Home</a>
+      <a href="about_us.html" class="nav-button">About</a>
+      <a href="download_eng.html" class="nav-button">Download</a>
+      <a href="donation_eng.html" class="nav-button">Donate</a>
+      <a href="service_eng.html" class="nav-button">Service</a>
+    </div>
+
+    <div class="lang-dropdown">
+      <button class="lang-button">🌐</button>
+      <div class="dropdown-content">
+        <a href="Download.html"><img src="files/images/fr.png" alt="French" class="flag"> French</a>
+        <a href="download_eng.html"><img src="files/images/uk.png" alt="English" class="flag"> English</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <h1>The Master of Breeze,<br>a game that speaks about us.</h1>
+    <h2>Speaking to young people, because we’re not old.</h2>
+
+    <a href="files/jeux.zip" class="download-btn" download>Download</a>
+  </div>
+
+  <img src="files/images/chateau.png" class="corner-image" alt="Castle" />
+
+  <script>
+    const langButton = document.querySelector('.lang-button');
+    const dropdown = document.querySelector('.dropdown-content');
+
+    langButton.addEventListener('click', () => {
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    window.addEventListener('click', function(e) {
+      if (!e.target.closest('.lang-dropdown')) {
+        dropdown.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
